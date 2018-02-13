@@ -4,17 +4,19 @@
 function factorial(n) {
 	if (n == 0 || n == 1) {
 		return 1;
-	} else {
+	} else if (n > 1) {
 		var fact = 1;
 		while (n != 0) {
 			fact *= n;
 			n--;
 		}
 		return fact;
+	} else {
+		throw "No negative numbers!";
 	}
 }
 
-console.log(factorial(5));
+console.log(factorial(-6));
 
 
 //Task 2
